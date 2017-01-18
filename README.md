@@ -22,12 +22,10 @@ Para cambiar el nombre de los paquetes solo debes refactorizar, y hacer el cambi
 
 Dentro del archivo `web.xml` encontrarás la etiqueta `<servlet-mapping>` y esta contiene el parámetro `<url-pattern>` y como valor tiene: `/api/\*` el cual indica que para acceder a tus servicios deberás anteponer el prefijo api, así `localhost:8888/api/tus_servicios` o puedes prescindir del prefijo así: `/\\*` para que sea más transparente.
 
-Si tienes paquetes con múltiples servicios debes duplicar todo el elemento `<servlet>` y  modificar el valor del `<servlet-name>` por uno nuevo y configurar el nombre del paquete como se explica arriba. También deberás duplicar el  `<servlet-mapping>` y cambiar el `<servlet-name>` por el que agregaste dentro de `<servlet>`, el parámetro de la etiqueta `<url-pattern>` puedes conservarlo tal como está o cambiarlo como expliqué arriba. Ejemplo de multiples servicios en diferentes paquetes. 
+Si tienes paquetes con múltiples servicios debes duplicar todo el elemento `<servlet>` y  modificar el valor del `<servlet-name>` por uno nuevo y configurar el nombre del paquete como se explica arriba. También deberás duplicar el  `<servlet-mapping>` y cambiar el `<servlet-name>` por el que agregaste dentro de `<servlet>`, el parámetro de la etiqueta `<url-pattern>` puedes conservarlo tal como está o cambiarlo como expliqué arriba. [Ejemplo de multiples servicios en diferentes paquetes](/web.xml). 
 
 Ejecuta el proyecto, en muchos casos aparece un error, y se debe porque elimine la librería **asm-4.jar**, ignorar y seguir con el despliegue, ejecutar el proyecto no debería tardar más de 15 segundos en entorno local. Accede al servicio con la url especificada `localhost:8888/api/test`, como respuesta el servicio retorna un html content-type.
 
 **Keep coding and print("Hola mundo!")**
 
 tw: @swlozano
-
-[I'm a relative reference to a repository file](/web.xml)
