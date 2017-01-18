@@ -20,7 +20,7 @@ Del lado de JAVA solo tenemos una carpeta `gae.rest.test` que contiene la clase 
 Para cambiar el nombre de los paquetes solo debes refactorizar, y hacer el cambio en la carpeta war en el archivo `web.xml` y cambiar el valor del parámetro `gae.rest.test` por el nombre del paquete que ingresaste en la refactorización, no es necesario hacerlo para todos los paquetes, solo para aquellos paquetes que contienen los servicios.
 
 
-Dentro del archivo `web.xml` encontrarás la etiqueta `<servlet-mapping>` y esta contiene el parámetro `<url-pattern>` y como valor tiene: `/api/\*` el cual indica que para acceder a tus servicios deberás anteponer el prefijo api, así `localhost:8888/api/tus_servicios` o puedes prescindir del prefijo así: `/\\*` para que sea más transparente.
+Dentro del archivo `web.xml` encontrarás la etiqueta `<servlet-mapping>` y esta contiene el parámetro `<url-pattern>` y como valor tiene: `/api/*` el cual indica que para acceder a tus servicios deberás anteponer el prefijo api, así `localhost:8888/api/tus_servicios` o puedes prescindir del prefijo así: `/*` para que sea más transparente.
 
 Si tienes paquetes con múltiples servicios debes duplicar todo el elemento `<servlet>` y  modificar el valor del `<servlet-name>` por uno nuevo y configurar el nombre del paquete como se explica arriba. También deberás duplicar el  `<servlet-mapping>` y cambiar el `<servlet-name>` por el que agregaste dentro de `<servlet>`, el parámetro de la etiqueta `<url-pattern>` puedes conservarlo tal como está o cambiarlo como expliqué arriba. [Ejemplo de múltiples servicios en diferentes paquetes](/web.xml). 
 
