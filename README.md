@@ -28,7 +28,7 @@ Ejecuta el proyecto, en muchos casos aparece un error, y se debe porque elimine 
 
 Keep coding and 
 ```java 
-console.log("Hola mundo!")
+print("Hola mundo!")
 ```
 
 ```javascript
