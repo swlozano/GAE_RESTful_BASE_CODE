@@ -26,7 +26,11 @@ Si tienes paquetes con múltiples servicios debes duplicar todo el elemento `<se
 
 Ejecuta el proyecto, en muchos casos aparece un error, y se debe porque elimine la librería **asm-4.jar**, ignorar y seguir con el despliegue, ejecutar el proyecto no debería tardar más de 15 segundos en entorno local. Accede al servicio con la url especificada `localhost:8888/api/test`, como respuesta el servicio retorna un html content-type.
 
-Keep coding and ```console.log("Hola mundo!")```
+Keep coding and 
+```java 
+console.log("Hola mundo!")
+```
+
 ```javascript
 var s = "JavaScript syntax highlighting";
 alert(s);
